@@ -16,10 +16,7 @@ with open('./data.csv') as csv_file:
         data.append([int(row[0]), int(row[1]), int(row[2])])
 
 data = np.asarray(data)
-
-# y = iris.target
-
-estimators = [('k_means_iris_4', KMeans(n_clusters=4))]
+estimators = [('k_means_4', KMeans(n_clusters=4))]
 
 for name, est in estimators:
     fig = plt.figure()
