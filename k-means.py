@@ -25,7 +25,7 @@ for name, est in estimators:
     labels = est.labels_
 
     ax.scatter(data[:, 0], data[:, 1], data[:, 2],
-               c=labels.astype(np.float), edgecolor='k')
+               c=labels, cmap='rainbow', edgecolor='k')
 
     ax.w_xaxis.set_ticklabels([])
     ax.w_yaxis.set_ticklabels([])

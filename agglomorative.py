@@ -22,7 +22,7 @@ print(labels)
 fig = plt.figure()
 ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
 ax.scatter(X[:, 0], X[:, 1], X[:, 2],
-           c=labels.astype(np.float), edgecolor='k')
+           c=clustering.labels_, cmap='rainbow',edgecolor='k')
 
 
 ax.set_xlabel('Yes')
