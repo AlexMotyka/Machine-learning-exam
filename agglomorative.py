@@ -28,7 +28,7 @@ ax.scatter(X[:, 0], X[:, 1], X[:, 2],
 ax.set_xlabel('Yes')
 ax.set_ylabel('No')
 ax.set_zlabel('Undecided')
-ax.set_title('4 clusters')
+ax.set_title('Agglomerative Clustering N=4')
 ax.dist = 12
 
 plt.show()

@@ -27,13 +27,10 @@ for name, est in estimators:
     ax.scatter(data[:, 0], data[:, 1], data[:, 2],
                c=labels, cmap='rainbow', edgecolor='k')
 
-    ax.w_xaxis.set_ticklabels([])
-    ax.w_yaxis.set_ticklabels([])
-    ax.w_zaxis.set_ticklabels([])
-    ax.set_xlabel('Yes')
-    ax.set_ylabel('No')
-    ax.set_zlabel('Undecided')
-    ax.set_title('4 clusters')
+    ax.set_xlabel('Yes %')
+    ax.set_ylabel('No %')
+    ax.set_zlabel('Undecided %')
+    ax.set_title('K-means N=4')
     ax.dist = 12
 
 plt.show()
