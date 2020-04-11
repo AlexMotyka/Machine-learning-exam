@@ -13,10 +13,10 @@ def calculate_agreement(answers):
 question_ratings = []
 
 # get the data for each question
-for group, name in files:
+for question, name in files:
     answers = []
     # get the data for a single question
-    with open(group) as csv_file:
+    with open(question) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter='\t')
         for row in csv_reader:
             answers.append(np.array([int(row[0]), int(row[1]), int(row[2])]))
