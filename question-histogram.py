@@ -47,5 +47,7 @@ for group, rows, cols, num, name in files:
         ax.set_xticks([r + barWidth for r in range(len(yes_bars))])
         ax.set_xticklabels(['G1', 'G2', 'G3', 'G4'])
 
+ax =fig.add_subplot(355)
+plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left')
 fig.tight_layout()
 plt.show()
