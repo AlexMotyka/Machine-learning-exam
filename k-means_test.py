@@ -22,6 +22,9 @@ file_list = ['q1_addedVals.csv',
              'q13_addedVals.csv',
              'q14_addedVals.csv',
              'q15_addedVals.csv']
+# file_list = ['q4_addedValsQ5.csv',
+#              'q5_addedValsQ5.csv',
+#              'q6_addedValsQ5.csv']
 answers_arr = []
 input_arr = []
 for filename in file_list:

@@ -91,7 +91,7 @@ compute_cost
 This function calculates cost with the Sum of Squares Deviation formula
 y_ - the true output
 activation_layer - is the output of the network (the value)
-sse/ssd - the sum of squared deviations/error between the two 
+sse/ssd - the sum of squared deviations/error between the two
 """
 def compute_cost(activation_layer, y_):
     true_output_std = np.std(y_)
