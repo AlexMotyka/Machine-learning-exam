@@ -177,20 +177,20 @@ def predict_layered_network_layer(x_, parameters_, results=False):
     return prediction_.reshape(1, prediction_.shape[0]), prediction_
 
 '''----- main code starts here ------'''
-file_list = ['NewClusters.csv']
+file_list = ['Master.csv']
 # file_list = ['G1-Sheet1.csv', 'G2-Sheet1.csv', 'G3-Sheet1.csv', 'G4-Sheet1.csv']
 answers_arr = []
 input_arr = []
-group_number = 1
+# group_number = 1
 for filename in file_list:
     with open(filename) as csvf:
         csvf_read = csv.reader(csvf, delimiter=',')
 
         for row in csvf_read:
-            input_arr.append([int(row[1]), int(row[2]), int(row[3])])
-            answers_arr.append(int(row[4]))
+            input_arr.append([int(row[0]), int(row[1]), int(row[2]), int(row[3]), int(row[4]), int(row[5]), int(row[6]), int(row[7]), int(row[8]), int(row[9]), int(row[10]), int(row[11]), int(row[12]), int(row[13]), int(row[14]), int(row[15]), int(row[16]), int(row[17]), int(row[18]), int(row[19]), int(row[20]), int(row[21]), int(row[22]), int(row[23]), int(row[24]), int(row[25]), int(row[26]), int(row[27]), int(row[28]), int(row[29]), int(row[30]), int(row[31]), int(row[32]), int(row[33]), int(row[34]), int(row[35]), int(row[36]), int(row[37]), int(row[38]), int(row[39]), int(row[40]), int(row[41]), int(row[42]), int(row[43]), int(row[44])])
+            answers_arr.append(int(row[45]))
 
-    group_number += 1
+    # group_number += 1
 
 
 # convert the lists to numpy array for performance, and then zip them together
