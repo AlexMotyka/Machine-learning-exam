@@ -6,8 +6,14 @@ files = [('./data/q1.csv', 'Question 1'), ('./data/q2.csv','Question 2'), ('./da
          ('./data/q11.csv', 'Question 11'), ('./data/q12.csv','Question 12'), ('./data/q13.csv','Question 13'), ('./data/q14.csv','Question 14'), ('./data/q15.csv','Question 15')]
 
 
+# calculate the agreement rating between the 4 groups answers
+# rating of 0 represents a perfect agreement where all groups answered identical to one another
 def calculate_agreement(answers):
+    # sum each of the answer arrays together
     answers_sum = answers[0] + answers[1] + answers[2] + answers[3]
+    # maximum value is 400 (a perfect score where all 4 groups have the same yes, no, undecided distribution)
+    # maximum of the answers sum array is the majority answer among the 4 Groups
+    # 400 - majority gives us the agreement rating
     return 400 - max(answers_sum)
 
 question_ratings = []

@@ -8,13 +8,15 @@ files = [('./data/q1.csv', 'Question 1'), ('./data/q2.csv','Question 2'), ('./da
 
 questions = []
 
-
+# calculate the similarity two questions have to one another
 def calc_similarity(zipped_list):
+    # a similarity_rating of 0 indicates the answers were identical
     similarity_rating = 0
     for list, comparison_list in zipped_list:
-        # print("Comparing " + str(list) + " and " + str(comparison_list))
+        # subtract the arrays to find the difference between each index
         difference = np.array(list)-np.array(comparison_list)
         for value in difference:
+            # add the difference to the similarity rating
             similarity_rating += abs(value)
     return similarity_rating
 
@@ -29,14 +31,17 @@ for question, name in files:
             answers.append([int(row[0]), int(row[1]), int(row[2])])
     questions.append({'name': name, 'answers': answers})
 
-
+# for each question compare it against the other questions
 for question in questions:
     print("---------------" + question['name'] + "-----------------------")
     comparison_results = []
+    # compare the question against each other question
     for comparison_question in questions:
+        # don't compare a question against itself
         if comparison_question['name'] == question['name']:
             pass
         else:
+            # zip this questions answers with the comparison questions answers
             zip_list = zip(question['answers'], comparison_question['answers'])
             score = calc_similarity(zip_list)
             comparison_results.append({'name': comparison_question['name'], 'rating': score})

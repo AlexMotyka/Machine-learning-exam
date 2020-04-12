@@ -16,6 +16,7 @@ for group, name in files:
     with open(group) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         for row in csv_reader:
+            # get the response
             answers = [int(row[0]), int(row[1]), int(row[2])]
             group_agreement_rating += calc_internal_agreement(answers)
     group_ratings.append({'name': name, 'rating': group_agreement_rating})
