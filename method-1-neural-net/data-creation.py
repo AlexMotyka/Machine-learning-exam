@@ -1,11 +1,6 @@
 import csv
 import random
 
-
-# files = [('./data/q1.csv', 'Question1'), ('./data/q2.csv','Question2'), ('./data/q3.csv','Question3'), ('./data/q4.csv','Question4'), ('./data/q5.csv','Question5'),
-#          ('./data/q6.csv', 'Question6'), ('./data/q7.csv','Question7'), ('./data/q8.csv','Question8'), ('./data/q9.csv','Question9'), ('./data/q10.csv','Question10'),
-#          ('./data/q11.csv', 'Question11'), ('./data/q12.csv','Question12'), ('./data/q13.csv','Question13'), ('./data/q14.csv','Question14'), ('./data/q15.csv','Question15')]
-
 files = [('./data/G1.csv', 'Group 1', 0), ('./data/G2.csv', 'Group 2', 1), ('./data/G3.csv', 'Group 3', 2), ('./data/G4.csv', 'Group 4', 3)]
 
 num_generated = 20
