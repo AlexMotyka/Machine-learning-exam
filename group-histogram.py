@@ -45,5 +45,7 @@ for group, axis, name in files:
         ax.set_xticks([r + barWidth for r in range(len(yes_bars))])
         ax.set_xticklabels(['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10', 'Q11', 'Q12', 'Q13', 'Q14', 'Q15'])
 
+ax =fig.add_subplot(222)
+plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left')
 fig.tight_layout()
 plt.show()
