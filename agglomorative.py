@@ -20,7 +20,7 @@ clustering.fit_predict(X)
 labels = clustering.labels_
 print(labels)
 fig = plt.figure()
-ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=22, azim=122)
 ax.scatter(X[:, 0], X[:, 1], X[:, 2],
            c=clustering.labels_, cmap='rainbow',edgecolor='k')
 
@@ -28,7 +28,7 @@ ax.scatter(X[:, 0], X[:, 1], X[:, 2],
 ax.set_xlabel('Yes')
 ax.set_ylabel('No')
 ax.set_zlabel('Undecided')
-ax.set_title('Agglomerative Clustering N=4')
+ax.set_title('Response Clusters Agglomerative Clustering N=4')
 ax.dist = 12
 
 plt.show()

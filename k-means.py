@@ -20,7 +20,7 @@ estimators = [('k_means_4', KMeans(n_clusters=4))]
 
 for name, est in estimators:
     fig = plt.figure()
-    ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+    ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=22, azim=122)
     est.fit(data)
     labels = est.labels_
 
@@ -30,7 +30,7 @@ for name, est in estimators:
     ax.set_xlabel('Yes %')
     ax.set_ylabel('No %')
     ax.set_zlabel('Undecided %')
-    ax.set_title('K-means N=4')
+    ax.set_title('Response Clusters K-means N=4')
     ax.dist = 12
 
 plt.show()
