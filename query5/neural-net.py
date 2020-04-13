@@ -238,7 +238,7 @@ n_h = 60
 n_y = Y_train_.shape[0]
 
 layers_dims = [n_x, n_h, n_y]
-parameters = layered_network_layer_model(x_train, Y_train_, layers_dims, num_iterations=70000, print_cost=True)
+parameters = layered_network_layer_model(x_train, Y_train_, layers_dims, num_iterations=40000, print_cost=True)
 predictions_train_L, raw_prediction_list_train = predict_layered_network_layer(x_train, parameters)
 
 # Creates a scatter plot that visualizes the cost over time

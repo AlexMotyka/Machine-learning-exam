@@ -16,7 +16,7 @@ def calc_similarity(zipped_list):
         # subtract the arrays to find the difference between each index
         difference = np.array(list)-np.array(comparison_list)
         for value in difference:
-            # add the difference to the similarity rating
+            # add the absolute difference to the similarity rating
             similarity_rating += abs(value)
     return similarity_rating
 
@@ -48,3 +48,4 @@ for question in questions:
     # sort in ascending rating (most similar to least)
     comparison_results.sort(key=lambda x: x['rating'])
     print("Most similar to least similar: " + str(comparison_results) + "\n")
+    # print("Most similar to " + question['name'] + ": " + str(comparison_results[0]['name']) + " with rating: " + str(comparison_results[0]['rating']) + "\n")

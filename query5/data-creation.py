@@ -10,7 +10,7 @@ Each row in the csv has the following structure: yes,no,undecided,group_number
 files = [('./data/G1.csv', 'Group 1', 0), ('./data/G2.csv', 'Group 2', 1), ('./data/G3.csv', 'Group 3', 2), ('./data/G4.csv', 'Group 4', 3)]
 
 # genereate this many data points
-num_generated = 20
+num_generated = 100
 # store the generated data points for writing to a csv
 all_generated_responses = []
 
