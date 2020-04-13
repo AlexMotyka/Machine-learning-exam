@@ -33,4 +33,6 @@ for group in groups:
         question_num+=1
     # sort in ascending rating (most similar to least)
     comparison_results.sort(key=lambda x: x['rating'])
-    print("Most similar to least similar: " + str(comparison_results) + "\n")
+    print("Most agreement to least agreement: ")
+    for result in comparison_results:
+        print(str(result['name']) + " with rating: " + str(result['rating']))
