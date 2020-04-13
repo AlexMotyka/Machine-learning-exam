@@ -26,7 +26,7 @@ for group, color, axis, name in files:
         ax.set_xlabel('Yes')
         ax.set_ylabel('No')
         ax.set_zlabel('Undecided')
-        ax.set_title(name)
+        ax.set_title(name + " Responses")
         ax.dist = 12
 
 plt.show()

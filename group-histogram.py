@@ -25,7 +25,7 @@ for group, axis, name in files:
             undecided_bars.append(int(row[2]))
 
         ax = fig.add_subplot(axis)
-        ax.set_title(name)
+        ax.set_title(name + " Responses")
 
         # set width of bar
         barWidth = 0.25
@@ -41,7 +41,7 @@ for group, axis, name in files:
         ax.bar(r3, undecided_bars, color='grey', width=barWidth, edgecolor='white', label='Und.')
 
         # Add xticks on the middle of the group bars
-        ax.set_xlabel('Question Responses', fontweight='bold')
+        ax.set_xlabel('Question', fontweight='bold')
         ax.set_xticks([r + barWidth for r in range(len(yes_bars))])
         ax.set_xticklabels(['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10', 'Q11', 'Q12', 'Q13', 'Q14', 'Q15'])
 
